@@ -25,7 +25,7 @@ module.exports = function unicodeAscii() {
       const errorOptions = { fileName: file.path, showStack: true };
       const message = 'Streams are not supported';
       setImmediate(() => {
-        callback(new PluginError('unicode-to-ascii', message, errorOptions));
+        callback(new Error('unicode-to-ascii', message, errorOptions));
       });
     }
 
